@@ -16,18 +16,35 @@
             <p>Large-model sourcing</p>
           </div>
         </div>
-        <nav>
-          <button class="nav-item active" type="button">客户名单</button>
-          <button class="nav-item" type="button">跟进队列</button>
-          <button class="nav-item" type="button">公司视图</button>
+        <nav class="main-nav" aria-label="Workspace views">
+          <button class="nav-item active" type="button" data-view="workbench">前台工作台</button>
+          <button class="nav-item" type="button" data-view="admin">管理员后台</button>
         </nav>
+        <div class="sidebar-groups" aria-label="Company folders">
+          <section class="nav-group">
+            <h2>海外</h2>
+            <button class="folder-item active" type="button" data-company-filter="all">全部公司</button>
+            <button class="folder-item" type="button" data-company-filter="OpenAI">OpenAI</button>
+            <button class="folder-item" type="button" data-company-filter="Google">Google</button>
+            <button class="folder-item" type="button" data-company-filter="Anthropic">Anthropic</button>
+            <button class="folder-item" type="button" data-company-filter="xAI">xAI</button>
+            <button class="folder-item" type="button" data-company-filter="Meta">Meta</button>
+          </section>
+          <section class="nav-group">
+            <h2>国内</h2>
+            <button class="folder-item" type="button" data-company-filter="ByteDance">字节</button>
+            <button class="folder-item" type="button" data-company-filter="Alibaba">阿里</button>
+            <button class="folder-item" type="button" data-company-filter="Tencent">腾讯</button>
+            <button class="folder-item" type="button" data-company-filter="ChinaSix">大模型六小龙</button>
+          </section>
+        </div>
       </aside>
 
-      <section class="workspace">
+      <section class="workspace view active" id="workbench-view">
         <header class="topbar">
           <div>
-            <p class="eyebrow">微信联系人 + 近 7 天聊天</p>
-            <h2>大模型人才客户名单</h2>
+            <p class="eyebrow" id="scope-label">全部公司</p>
+            <h2>前台工作台</h2>
           </div>
           <div class="actions">
             <label class="search">
@@ -56,6 +73,72 @@
           </div>
           <aside class="detail" id="detail"></aside>
         </section>
+      </section>
+
+      <section class="workspace view" id="admin-view">
+        <div class="admin-login" id="admin-login">
+          <form class="login-box" id="admin-login-form">
+            <p class="eyebrow">管理员后台</p>
+            <h2>输入密码</h2>
+            <input id="admin-password" type="password" placeholder="Password" autocomplete="current-password">
+            <button class="primary-action" type="submit">进入后台</button>
+            <p class="form-error" id="login-error"></p>
+          </form>
+        </div>
+
+        <div class="admin-console" id="admin-console" hidden>
+          <header class="topbar">
+            <div>
+              <p class="eyebrow">自动化抓取与权限健康度</p>
+              <h2>管理员后台</h2>
+            </div>
+            <button class="secondary-action" type="button" id="admin-lock">锁定</button>
+          </header>
+
+          <section class="admin-grid">
+            <article class="admin-panel">
+              <div class="panel-title">
+                <span>自动化抓取入口</span>
+                <strong>Blocked</strong>
+              </div>
+              <code>python3 skills/large-model-talent-crm/scripts/build_crm.py --contacts ... --chats ... --output demo/data/crm_customers.json</code>
+              <button class="primary-action" type="button" id="simulate-run">模拟运行</button>
+            </article>
+
+            <article class="admin-panel">
+              <div class="panel-title">
+                <span>权限健康度</span>
+                <strong>需要授权</strong>
+              </div>
+              <div class="health-list">
+                <span>WeCom 通讯录 <b>Blocked</b></span>
+                <span>WeCom 消息 <b>Blocked</b></span>
+                <span>微信本地数据库 <b>Encrypted</b></span>
+                <span>本地文件扫描 <b>Ready</b></span>
+              </div>
+            </article>
+
+            <article class="admin-panel">
+              <div class="panel-title">
+                <span>分类规则</span>
+                <strong>Active</strong>
+              </div>
+              <div class="rule-list">
+                <span>海外：OpenAI / Google / Anthropic / xAI / Meta</span>
+                <span>国内：字节 / 阿里 / 腾讯 / 大模型六小龙</span>
+                <span>高优先级：目标公司 + 大模型角色信号 + 活跃关系</span>
+              </div>
+            </article>
+
+            <article class="admin-panel log-panel">
+              <div class="panel-title">
+                <span>任务日志</span>
+                <strong id="log-count">0</strong>
+              </div>
+              <div class="task-log" id="task-log"></div>
+            </article>
+          </section>
+        </div>
       </section>
     </main>
     <script src="./src/app.js"></script>

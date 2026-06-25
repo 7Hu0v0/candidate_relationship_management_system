@@ -1,6 +1,6 @@
 ---
 name: large-model-talent-crm
-description: Build and update a CRM for large-model AI talent from visible WeCom/WeChat contacts, contact remarks or aliases, recent chat records, and target-company heuristics. Use when Codex needs to scan contacts, summarize recruiting or sourcing relationships, classify candidates by large-model company/lab signals, produce customer/candidate lists, or prepare a demo CRM dataset from chat-derived evidence.
+description: Build and update a CRM for large-model AI talent from visible WeCom/WeChat contacts, local WeChat files, contact remarks or aliases, recent chat records, resume/meeting-note evidence, and target-company heuristics. Use when Codex needs to scan WeCom or macOS WeChat data, diagnose encrypted local chat stores, extract candidate leads from readable chat-adjacent files, classify candidates by large-model company/lab signals, update the demo CRM frontend/admin experience, or prepare a reviewable CRM dataset from chat-derived evidence.
 ---
 
 # Large Model Talent CRM
@@ -16,7 +16,8 @@ Prefer these sources in order:
 1. Current visible WeCom contacts via `wecom-cli contact get_userlist '{}'`.
 2. Recent chat list via `wecom-cli msg get_msg_chat_list '{"begin_time":"YYYY-MM-DD HH:mm:ss","end_time":"YYYY-MM-DD HH:mm:ss"}'`.
 3. Recent messages per contact via `wecom-cli msg get_message '{"chat_type":1,"chatid":"USERID","begin_time":"YYYY-MM-DD HH:mm:ss","end_time":"YYYY-MM-DD HH:mm:ss"}'`.
-4. Existing exported JSON files supplied by the user.
+4. Local macOS WeChat data under `~/Library/Containers/com.tencent.xinWeChat/Data/Documents/xwechat_files/`.
+5. Existing exported JSON, resumes, meeting notes, and local files supplied by the user.
 
 Follow the underlying WeCom skills' limits: message history is normally limited to the last 7 days, and contacts are only the current user's visible range. Do not send messages from this skill.
 
@@ -24,16 +25,18 @@ Follow the underlying WeCom skills' limits: message history is normally limited 
 
 1. Read `references/company-taxonomy.md` when company matching or target-company scoring is needed.
 2. Read `references/crm-schema.md` before creating or updating a CRM file.
-3. Collect contacts and recent chats.
-4. Normalize each person into the CRM schema:
+3. For macOS WeChat folders, read `references/wechat-local-scan.md` before scanning or interpreting local backup/database paths.
+4. For website/product updates, read `references/demo-product-workflow.md` before editing `demo/`.
+5. Collect contacts, recent chats, local readable files, or exported artifacts.
+6. Normalize each person into the CRM schema:
    - `name`, `userid`, `alias`, `remark`
    - company/lab signals from remarks, aliases, and messages
    - large-model role signals
    - relationship stage and next action
    - evidence snippets with dates
-5. Score each record conservatively. Prefer "unknown" over unsupported claims.
-6. Run `scripts/build_crm.py` for deterministic JSON generation when source data is available as files.
-7. Produce a reviewable list before any outreach. Keep private chat details summarized; avoid dumping raw chat logs unless the user explicitly asks.
+7. Score each record conservatively. Prefer "unknown" over unsupported claims.
+8. Run `scripts/build_crm.py` for deterministic JSON generation when source data is available as files.
+9. Produce a reviewable list before any outreach. Keep private chat details summarized; avoid dumping raw chat logs unless the user explicitly asks.
 
 ## CLI Collection Pattern
 
@@ -83,6 +86,17 @@ python3 skills/large-model-talent-crm/scripts/build_crm.py \
 ```
 
 The script expects JSON files and writes a CRM list plus summary metrics. It is safe for offline demo data and exported WeCom data shaped like the examples.
+
+## Demo Product Pattern
+
+The demo is a static frontend under `demo/`:
+
+- `demo/index.html`: shell, sidebar, workbench, and admin sections.
+- `demo/src/app.js`: loading, filtering, local status edits, password-gated admin, and task logs.
+- `demo/src/styles.css`: layout and interaction styling.
+- `demo/data/crm_customers.json`: reviewable CRM records displayed by the frontend.
+
+Use browser-local storage for prototype-only state such as relationship stage, priority, follow-up status, owner, admin unlock, and simulated task logs. Treat frontend passwords as demo gates only; do not describe them as production authentication.
 
 ## Output Rules
 
