@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Large Model Talent CRM</title>
+    <link rel="stylesheet" href="./src/styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <aside class="sidebar" aria-label="CRM sections">
+        <div class="brand">
+          <div class="brand-mark">LM</div>
+          <div>
+            <h1>Talent CRM</h1>
+            <p>Large-model sourcing</p>
+          </div>
+        </div>
+        <nav>
+          <button class="nav-item active" type="button">客户名单</button>
+          <button class="nav-item" type="button">跟进队列</button>
+          <button class="nav-item" type="button">公司视图</button>
+        </nav>
+      </aside>
+
+      <section class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">微信联系人 + 近 7 天聊天</p>
+            <h2>大模型人才客户名单</h2>
+          </div>
+          <div class="actions">
+            <label class="search">
+              <span>搜索</span>
+              <input id="search" type="search" placeholder="姓名、公司、标签">
+            </label>
+            <select id="priority">
+              <option value="all">全部优先级</option>
+              <option value="P0">P0</option>
+              <option value="P1">P1</option>
+              <option value="P2">P2</option>
+              <option value="P3">P3</option>
+            </select>
+          </div>
+        </header>
+
+        <section class="metrics" id="metrics" aria-label="CRM metrics"></section>
+
+        <section class="layout">
+          <div class="table-panel">
+            <div class="table-head">
+              <span>候选客户</span>
+              <span id="result-count"></span>
+            </div>
+            <div class="table" id="customer-table"></div>
+          </div>
+          <aside class="detail" id="detail"></aside>
+        </section>
+      </section>
+    </main>
+    <script src="./src/app.js"></script>
+  </body>
+</html>

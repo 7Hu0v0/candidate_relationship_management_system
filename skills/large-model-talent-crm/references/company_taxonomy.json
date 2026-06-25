@@ -1,0 +1,34 @@
+{
+  "companies": [
+    {"name": "OpenAI", "aliases": ["openai", "gpt", "chatgpt", "codex", "sora"]},
+    {"name": "Anthropic", "aliases": ["anthropic", "claude"]},
+    {"name": "Google DeepMind", "aliases": ["google deepmind", "deepmind", "gemini", "google research", "tpu", "jax"]},
+    {"name": "Meta AI", "aliases": ["meta ai", "fair", "llama", "pytorch"]},
+    {"name": "xAI", "aliases": ["xai", "grok"]},
+    {"name": "Mistral AI", "aliases": ["mistral"]},
+    {"name": "Cohere", "aliases": ["cohere", "command r"]},
+    {"name": "DeepSeek", "aliases": ["deepseek", "deepseek-v", "deepseek-r"]},
+    {"name": "Moonshot AI", "aliases": ["moonshot", "kimi", "月之暗面"]},
+    {"name": "Zhipu AI", "aliases": ["zhipu", "智谱", "glm"]},
+    {"name": "MiniMax", "aliases": ["minimax", "海螺"]},
+    {"name": "Baichuan", "aliases": ["baichuan", "百川"]},
+    {"name": "StepFun", "aliases": ["stepfun", "阶跃星辰", "step"]},
+    {"name": "01.AI", "aliases": ["01.ai", "零一万物", "yi model"]},
+    {"name": "Alibaba Qwen", "aliases": ["alibaba", "aliyun", "qwen", "通义", "modelscope"]},
+    {"name": "Tencent Hunyuan", "aliases": ["tencent", "hunyuan", "混元"]},
+    {"name": "ByteDance Seed", "aliases": ["bytedance", "byte", "seed", "doubao", "豆包", "字节"]},
+    {"name": "Baidu ERNIE", "aliases": ["baidu", "ernie", "文心", "paddlepaddle"]},
+    {"name": "Huawei Pangu", "aliases": ["huawei", "pangu", "盘古", "mindspore", "ascend"]},
+    {"name": "NVIDIA", "aliases": ["nvidia", "cuda", "tensorrt", "megatron"]},
+    {"name": "AMD", "aliases": ["amd", "rocm"]},
+    {"name": "AWS", "aliases": ["aws", "bedrock", "sagemaker"]},
+    {"name": "Microsoft Azure", "aliases": ["azure", "microsoft", "msra"]},
+    {"name": "Google Cloud", "aliases": ["gcp", "google cloud", "vertex ai"]}
+  ],
+  "role_keywords": {
+    "model": ["pretraining", "post-training", "sft", "rlhf", "dpo", "reward model", "alignment", "reasoning", "multimodal", "speech", "video", "预训练", "后训练", "对齐", "多模态"],
+    "infra": ["distributed training", "gpu", "cuda", "nccl", "jax", "xla", "pytorch", "megatron", "deepspeed", "vllm", "tensorrt-llm", "triton", "serving", "inference", "quantization", "kv cache", "推理", "训练系统", "分布式训练"],
+    "data_eval": ["data engine", "synthetic data", "eval", "benchmark", "annotation", "safety", "red teaming", "retrieval", "rag", "评测", "数据", "安全"],
+    "product_agent": ["agent", "tool use", "browser", "coding assistant", "workflow", "copilot", "ai search", "智能体", "代码助手"]
+  }
+}

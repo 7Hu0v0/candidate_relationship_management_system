@@ -1,0 +1,4 @@
+interface:
+  display_name: "Large Model Talent CRM"
+  short_description: "Build CRM lists from WeCom talent signals"
+  default_prompt: "Use $large-model-talent-crm to build a candidate CRM from my visible WeCom contacts and recent chats."

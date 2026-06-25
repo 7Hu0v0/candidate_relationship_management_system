@@ -1,0 +1,10 @@
+{
+  "errcode": 0,
+  "errmsg": "ok",
+  "userlist": [
+    {"userid": "lin_pretrain", "name": "林澈", "alias": "DeepSeek infra", "remark": "DeepSeek 推理系统，朋友介绍，关注 vLLM/TensorRT-LLM"},
+    {"userid": "chen_eval", "name": "陈雨", "alias": "Kimi eval", "remark": "Moonshot / Kimi 评测与数据，之前聊过 agent eval"},
+    {"userid": "wang_pm", "name": "王岚", "alias": "Qwen product", "remark": "阿里 Qwen 应用产品，偏 AI agent 工作流"},
+    {"userid": "zhao_unknown", "name": "赵明", "alias": "", "remark": "算法工程师，来源待确认"}
+  ]
+}
