@@ -43,18 +43,26 @@ python3 skills/large-model-talent-crm/scripts/build_crm.py \
 
 ## View the demo
 
+项目根目录已经放了静态站点入口：
+
+```text
+index.html
+```
+
+在 GitHub Pages 里选择从仓库根目录发布即可。打开项目主页会自动进入 `demo/`。
+
 推荐从 repo 根目录启动本地服务：
 
 ```bash
 python3 -m http.server 8001
 ```
 
-Then open `http://localhost:8001/demo/`.
+Then open `http://localhost:8001/` or `http://localhost:8001/demo/`.
 
 也可以直接打开：
 
 ```text
-demo/index.html
+index.html
 ```
 
 页面会优先读取 `demo/data/crm_customers.json`，如果浏览器在 `file://` 下拦截 JSON 读取，会自动使用 `demo/data/crm_customers.js` 作为本地 fallback。
