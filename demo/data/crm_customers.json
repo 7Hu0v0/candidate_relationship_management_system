@@ -13,8 +13,8 @@
   "customers": [
     {
       "id": "talent_be1220f19a",
-      "name": "Qiye Tan",
-      "userid": "qiye_tan",
+      "name": "海外Infra候选人A",
+      "userid": "candidate_overseas_infra_a",
       "alias": "Meta large-scale training network",
       "remark": "Meta 侧大规模训练网络/通信方向，讨论 Nico、P2P transfer、collective communication、64K 训练、容错与调度。",
       "company": "Meta AI",
@@ -50,8 +50,8 @@
     },
     {
       "id": "talent_77220849bb",
-      "name": "张梦琳",
-      "userid": "zhang_menglin",
+      "name": "千问产品候选人B",
+      "userid": "candidate_qwen_product_b",
       "alias": "Qwen AI product",
       "remark": "阿里巴巴千问 AI 产品专家，负责多模态问答 agent 策略、评测体系、多 Agent 中枢分流和 Memory 体系；曾在字节做搜索评测与多模态理解。",
       "company": "Alibaba Qwen",
@@ -90,8 +90,8 @@
     },
     {
       "id": "talent_d6853cb900",
-      "name": "高世鑫",
-      "userid": "gao_shixin",
+      "name": "Agent产品候选人C",
+      "userid": "candidate_agent_product_c",
       "alias": "Doubao / Zhipu AI product",
       "remark": "字节跳动豆包体验与服务中台产品运营；曾任智谱 AI AIGC 事业部 AI 产品经理，负责 AMiner AI 科研助手、AI 搜索、AI 阅读、DeepResearch 类搜索。",
       "company": "ByteDance Seed",
@@ -130,8 +130,8 @@
     },
     {
       "id": "talent_798bf19ce7",
-      "name": "林澈",
-      "userid": "lin_pretrain",
+      "name": "推理系统候选人D",
+      "userid": "candidate_infra_d",
       "alias": "DeepSeek infra",
       "remark": "DeepSeek 推理系统，朋友介绍，关注 vLLM/TensorRT-LLM",
       "company": "DeepSeek",
@@ -170,8 +170,8 @@
     },
     {
       "id": "talent_b4fc8ccd04",
-      "name": "陈雨",
-      "userid": "chen_eval",
+      "name": "评测数据候选人E",
+      "userid": "candidate_eval_e",
       "alias": "Kimi eval",
       "remark": "Moonshot / Kimi 评测与数据，之前聊过 agent eval",
       "company": "Moonshot AI",
@@ -206,8 +206,8 @@
     },
     {
       "id": "talent_13b463df2c",
-      "name": "王岚",
-      "userid": "wang_pm",
+      "name": "应用产品候选人F",
+      "userid": "candidate_product_f",
       "alias": "Qwen product",
       "remark": "阿里 Qwen 应用产品，偏 AI agent 工作流",
       "company": "Alibaba Qwen",
@@ -239,8 +239,8 @@
     },
     {
       "id": "talent_de8b6d881c",
-      "name": "宋双洋",
-      "userid": "song_shuangyang",
+      "name": "后端平台候选人G",
+      "userid": "candidate_backend_g",
       "alias": "ByteDance backend / storage",
       "remark": "字节跳动 IES/TikTok 服务架构、飞书人事 Payroll 后端研发；更偏后端/存储/中台基础设施，AI 相关性需二次确认。",
       "company": "ByteDance Seed",
@@ -270,8 +270,8 @@
     },
     {
       "id": "talent_9be8a2a7c6",
-      "name": "赵明",
-      "userid": "zhao_unknown",
+      "name": "待确认候选人H",
+      "userid": "candidate_unknown_h",
       "alias": "",
       "remark": "算法工程师，来源待确认",
       "company": "unknown",

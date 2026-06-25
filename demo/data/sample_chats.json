@@ -1,25 +1,41 @@
 {
   "chats": [
     {
-      "chatid": "lin_pretrain",
-      "chat_name": "林澈",
+      "chatid": "candidate_infra_d",
+      "chat_name": "推理系统候选人D",
       "messages": [
-        {"sender": "林澈", "time": "2026-06-24 15:12:00", "text": "最近主要在做推理吞吐和 KV cache 优化，vLLM 那块坑挺多。"},
-        {"sender": "me", "time": "2026-06-24 15:30:00", "text": "下周可以约 30 分钟聊聊机会和团队方向。"}
+        {
+          "sender": "推理系统候选人D",
+          "time": "2026-06-24 15:12:00",
+          "text": "最近主要在做推理吞吐和 KV cache 优化，vLLM 那块坑挺多。"
+        },
+        {
+          "sender": "me",
+          "time": "2026-06-24 15:30:00",
+          "text": "下周可以约 30 分钟聊聊机会和团队方向。"
+        }
       ]
     },
     {
-      "chatid": "chen_eval",
-      "chat_name": "陈雨",
+      "chatid": "candidate_eval_e",
+      "chat_name": "评测数据候选人E",
       "messages": [
-        {"sender": "陈雨", "time": "2026-06-23 10:05:00", "text": "我们最近在补 agent benchmark 和 synthetic data 的闭环。"}
+        {
+          "sender": "评测数据候选人E",
+          "time": "2026-06-23 10:05:00",
+          "text": "我们最近在补 agent benchmark 和 synthetic data 的闭环。"
+        }
       ]
     },
     {
-      "chatid": "wang_pm",
-      "chat_name": "王岚",
+      "chatid": "candidate_product_f",
+      "chat_name": "应用产品候选人F",
       "messages": [
-        {"sender": "王岚", "time": "2026-06-20 18:45:00", "text": "Qwen 生态里企业 workflow 的需求很多，之后可以互相介绍资源。"}
+        {
+          "sender": "应用产品候选人F",
+          "time": "2026-06-20 18:45:00",
+          "text": "Qwen 生态里企业 workflow 的需求很多，之后可以互相介绍资源。"
+        }
       ]
     }
   ]
