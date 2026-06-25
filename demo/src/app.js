@@ -41,8 +41,15 @@ const state = {
 const priorityClass = { P0: "p0", P1: "p1", P2: "p2", P3: "p3" };
 
 async function loadData() {
-  const response = await fetch("./data/crm_customers.json");
-  state.payload = await response.json();
+  try {
+    const response = await fetch("./data/crm_customers.json");
+    state.payload = await response.json();
+  } catch {
+    state.payload = window.CRM_CUSTOMERS_DATA;
+  }
+  if (!state.payload?.customers?.length) {
+    throw new Error("CRM data is unavailable.");
+  }
   state.customers = state.payload.customers.map(applyLocalEdit);
   state.selectedId = state.customers[0]?.id;
   render();
@@ -284,5 +291,5 @@ document.querySelector("#simulate-run").addEventListener("click", () => {
 });
 
 loadData().catch((error) => {
-  document.body.innerHTML = `<main class="workspace"><h2>数据加载失败</h2><p>${error.message}</p></main>`;
+  document.body.innerHTML = `<main class="workspace"><h2>数据加载失败</h2><p>${error.message}</p><p>请从项目根目录运行 <code>python3 -m http.server 8001</code> 后访问 <code>http://localhost:8001/demo/</code>。</p></main>`;
 });

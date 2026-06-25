@@ -43,13 +43,21 @@ python3 skills/large-model-talent-crm/scripts/build_crm.py \
 
 ## View the demo
 
-Because the demo uses `fetch`, serve it from the repo root:
+推荐从 repo 根目录启动本地服务：
 
 ```bash
-python3 -m http.server 8000
+python3 -m http.server 8001
 ```
 
-Then open `http://localhost:8000/demo/`.
+Then open `http://localhost:8001/demo/`.
+
+也可以直接打开：
+
+```text
+demo/index.html
+```
+
+页面会优先读取 `demo/data/crm_customers.json`，如果浏览器在 `file://` 下拦截 JSON 读取，会自动使用 `demo/data/crm_customers.js` 作为本地 fallback。
 
 ## Local WeChat sourcing
 

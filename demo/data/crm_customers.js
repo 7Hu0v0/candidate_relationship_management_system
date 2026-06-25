@@ -1,0 +1,295 @@
+window.CRM_CUSTOMERS_DATA = {
+  "generated_at": "2026-06-25 16:45:00",
+  "summary": {
+    "total": 8,
+    "priority_counts": {
+      "P0": 1,
+      "P1": 4,
+      "P2": 2,
+      "P3": 1
+    },
+    "active_or_warm": 4
+  },
+  "customers": [
+    {
+      "id": "talent_be1220f19a",
+      "name": "Qiye Tan",
+      "userid": "qiye_tan",
+      "alias": "Meta large-scale training network",
+      "remark": "Meta 侧大规模训练网络/通信方向，讨论 Nico、P2P transfer、collective communication、64K 训练、容错与调度。",
+      "company": "Meta AI",
+      "company_confidence": "high",
+      "role_signals": [
+        "infra",
+        "model"
+      ],
+      "relationship_stage": "active",
+      "priority": "P0",
+      "llm_relevance_score": 80,
+      "last_contact_at": "2026-04-01 00:00:00",
+      "next_action": "Review the meeting note and schedule a focused follow-up on distributed training communication and fault tolerance.",
+      "evidence": [
+        {
+          "source": "file",
+          "text": "强将交流纪要显示其负责 network 领域，重点是 Nico/Nexo、GPU 通信效率、大规模训练容错和通信库优化。",
+          "time": "2026-04"
+        },
+        {
+          "source": "file",
+          "text": "讨论覆盖 64K 规模预训练、PyTorch/NCCL zero-copy、通信重建、跨机房和 GB 平台稳定性。",
+          "time": "2026-04"
+        }
+      ],
+      "tags": [
+        "company:Meta AI",
+        "role:infra",
+        "role:model",
+        "priority:high",
+        "source:wechat-file"
+      ]
+    },
+    {
+      "id": "talent_77220849bb",
+      "name": "张梦琳",
+      "userid": "zhang_menglin",
+      "alias": "Qwen AI product",
+      "remark": "阿里巴巴千问 AI 产品专家，负责多模态问答 agent 策略、评测体系、多 Agent 中枢分流和 Memory 体系；曾在字节做搜索评测与多模态理解。",
+      "company": "Alibaba Qwen",
+      "company_confidence": "high",
+      "role_signals": [
+        "product_agent",
+        "data_eval",
+        "model"
+      ],
+      "relationship_stage": "new",
+      "priority": "P1",
+      "llm_relevance_score": 60,
+      "last_contact_at": "unknown",
+      "next_action": "Review CV details and decide whether to route to AI product, agent, or evaluation roles.",
+      "evidence": [
+        {
+          "source": "cv",
+          "text": "CV shows current Alibaba Qwen AI product work on multimodal QA agent strategy, evaluation system, multi-agent routing, and Memory.",
+          "time": "2026-05"
+        },
+        {
+          "source": "cv",
+          "text": "Prior ByteDance experience includes Douyin search evaluation, vertical search, and multimodal understanding.",
+          "time": "2026-05"
+        }
+      ],
+      "tags": [
+        "company:Alibaba Qwen",
+        "signal_company:ByteDance Seed",
+        "role:product_agent",
+        "role:data_eval",
+        "role:model",
+        "priority:high",
+        "source:cv"
+      ]
+    },
+    {
+      "id": "talent_d6853cb900",
+      "name": "高世鑫",
+      "userid": "gao_shixin",
+      "alias": "Doubao / Zhipu AI product",
+      "remark": "字节跳动豆包体验与服务中台产品运营；曾任智谱 AI AIGC 事业部 AI 产品经理，负责 AMiner AI 科研助手、AI 搜索、AI 阅读、DeepResearch 类搜索。",
+      "company": "ByteDance Seed",
+      "company_confidence": "medium",
+      "role_signals": [
+        "product_agent",
+        "data_eval",
+        "model"
+      ],
+      "relationship_stage": "new",
+      "priority": "P1",
+      "llm_relevance_score": 60,
+      "last_contact_at": "unknown",
+      "next_action": "Review CV and consider for AI product, AI search, RAG, and research-agent scenarios.",
+      "evidence": [
+        {
+          "source": "cv",
+          "text": "CV shows ByteDance Doubao service experience and Zhipu AI AMiner AI product work across AI search, AI reading, AI writing, and agent workflows.",
+          "time": "2026-04"
+        },
+        {
+          "source": "cv",
+          "text": "Project evidence includes Plan-Query-Agent, benchmark construction, GLM-Z1-Rumination, GLM-4v, and LongCite evaluation.",
+          "time": "2026-04"
+        }
+      ],
+      "tags": [
+        "company:ByteDance Seed",
+        "signal_company:Zhipu AI",
+        "role:product_agent",
+        "role:data_eval",
+        "role:model",
+        "priority:high",
+        "source:cv"
+      ]
+    },
+    {
+      "id": "talent_798bf19ce7",
+      "name": "林澈",
+      "userid": "lin_pretrain",
+      "alias": "DeepSeek infra",
+      "remark": "DeepSeek 推理系统，朋友介绍，关注 vLLM/TensorRT-LLM",
+      "company": "DeepSeek",
+      "company_confidence": "medium",
+      "role_signals": [
+        "infra"
+      ],
+      "relationship_stage": "active",
+      "priority": "P1",
+      "llm_relevance_score": 70,
+      "last_contact_at": "2026-06-24 15:30:00",
+      "next_action": "Review recent context and schedule a focused follow-up.",
+      "evidence": [
+        {
+          "source": "remark",
+          "text": "DeepSeek 推理系统，朋友介绍，关注 vLLM/TensorRT-LLM",
+          "time": "unknown"
+        },
+        {
+          "source": "chat",
+          "text": "最近主要在做推理吞吐和 KV cache 优化，vLLM 那块坑挺多。",
+          "time": "2026-06-24 15:12:00"
+        },
+        {
+          "source": "chat",
+          "text": "下周可以约 30 分钟聊聊机会和团队方向。",
+          "time": "2026-06-24 15:30:00"
+        }
+      ],
+      "tags": [
+        "company:DeepSeek",
+        "signal_company:NVIDIA",
+        "role:infra",
+        "priority:high"
+      ]
+    },
+    {
+      "id": "talent_b4fc8ccd04",
+      "name": "陈雨",
+      "userid": "chen_eval",
+      "alias": "Kimi eval",
+      "remark": "Moonshot / Kimi 评测与数据，之前聊过 agent eval",
+      "company": "Moonshot AI",
+      "company_confidence": "high",
+      "role_signals": [
+        "data_eval",
+        "product_agent"
+      ],
+      "relationship_stage": "warm",
+      "priority": "P1",
+      "llm_relevance_score": 60,
+      "last_contact_at": "2026-06-23 10:05:00",
+      "next_action": "Send a light-touch follow-up tied to the recent discussion.",
+      "evidence": [
+        {
+          "source": "remark",
+          "text": "Moonshot / Kimi 评测与数据，之前聊过 agent eval",
+          "time": "unknown"
+        },
+        {
+          "source": "chat",
+          "text": "我们最近在补 agent benchmark 和 synthetic data 的闭环。",
+          "time": "2026-06-23 10:05:00"
+        }
+      ],
+      "tags": [
+        "company:Moonshot AI",
+        "role:data_eval",
+        "role:product_agent",
+        "priority:high"
+      ]
+    },
+    {
+      "id": "talent_13b463df2c",
+      "name": "王岚",
+      "userid": "wang_pm",
+      "alias": "Qwen product",
+      "remark": "阿里 Qwen 应用产品，偏 AI agent 工作流",
+      "company": "Alibaba Qwen",
+      "company_confidence": "high",
+      "role_signals": [
+        "product_agent"
+      ],
+      "relationship_stage": "warm",
+      "priority": "P2",
+      "llm_relevance_score": 50,
+      "last_contact_at": "2026-06-20 18:45:00",
+      "next_action": "Send a light-touch follow-up tied to the recent discussion.",
+      "evidence": [
+        {
+          "source": "remark",
+          "text": "阿里 Qwen 应用产品，偏 AI agent 工作流",
+          "time": "unknown"
+        },
+        {
+          "source": "chat",
+          "text": "Qwen 生态里企业 workflow 的需求很多，之后可以互相介绍资源。",
+          "time": "2026-06-20 18:45:00"
+        }
+      ],
+      "tags": [
+        "company:Alibaba Qwen",
+        "role:product_agent"
+      ]
+    },
+    {
+      "id": "talent_de8b6d881c",
+      "name": "宋双洋",
+      "userid": "song_shuangyang",
+      "alias": "ByteDance backend / storage",
+      "remark": "字节跳动 IES/TikTok 服务架构、飞书人事 Payroll 后端研发；更偏后端/存储/中台基础设施，AI 相关性需二次确认。",
+      "company": "ByteDance Seed",
+      "company_confidence": "medium",
+      "role_signals": [
+        "infra",
+        "data_eval"
+      ],
+      "relationship_stage": "new",
+      "priority": "P2",
+      "llm_relevance_score": 50,
+      "last_contact_at": "unknown",
+      "next_action": "Review whether backend storage and platform experience maps to AI infra or data platform roles before outreach.",
+      "evidence": [
+        {
+          "source": "cv",
+          "text": "CV shows ByteDance IES/TikTok service architecture and Lark Payroll backend work, with storage, SSO, middleware, and consistency projects.",
+          "time": "2025-05"
+        }
+      ],
+      "tags": [
+        "company:ByteDance Seed",
+        "role:infra",
+        "role:data_eval",
+        "source:cv"
+      ]
+    },
+    {
+      "id": "talent_9be8a2a7c6",
+      "name": "赵明",
+      "userid": "zhao_unknown",
+      "alias": "",
+      "remark": "算法工程师，来源待确认",
+      "company": "unknown",
+      "company_confidence": "low",
+      "role_signals": [],
+      "relationship_stage": "new",
+      "priority": "P3",
+      "llm_relevance_score": 0,
+      "last_contact_at": "unknown",
+      "next_action": "Review manually before outreach.",
+      "evidence": [
+        {
+          "source": "remark",
+          "text": "算法工程师，来源待确认",
+          "time": "unknown"
+        }
+      ],
+      "tags": []
+    }
+  ]
+};
