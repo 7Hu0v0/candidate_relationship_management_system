@@ -4,7 +4,7 @@
 
 ## Online Demo
 
-[打开在线 Demo](https://7hu0v0.github.io/candidate_relationship_management_system/)
+[打开在线 Demo](https://7hu0v0.github.io/candidate_relationship_management_system/demo/)
 
 ## What It Shows
 
